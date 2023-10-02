@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { BackgroundColorContext } from "./contexts/backgroundcolor.context";
 
 const Control = () => {
-  const { setBackgroundColor } = useContext(BackgroundColorContext);
+  const { dispatch } = useContext(BackgroundColorContext);
   function onChangeBackgroundColor() {
-    setBackgroundColor("purple");
+    dispatch({ type: "CHANGE_BACKGROUND_COLOR", payload: "red" });
   }
 
   return (
